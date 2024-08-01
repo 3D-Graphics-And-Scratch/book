@@ -1,5 +1,6 @@
 # Stamp Based Engine
 *(bigbrain123321)*  
+
      To create a stamp based engine all the object data needs to be stored in lists. This data includes the object’s position, its costume (sprite that will be stamped for it), and its size. Additional data can be assigned to an object such as ghost effect, brightness, etc.  To do this the X coordinates can be stored in one list, the Y coordinates can be stored in another list, and the same goes for the Z coordinates, object costumes, etc.
 
 Here is some example code demonstrating how you could go about creating and storing this object data:

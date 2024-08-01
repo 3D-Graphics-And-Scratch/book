@@ -2,6 +2,7 @@
 ### Storing
 
 *(scratchtomv, krypto)*  
+
 The way of storing triangles is heavily defined by how it is used.  One method is storing all triangles and all the vertices in two lists. The mesh data can be easily accessed by looping through these lists.
 
 This is the easiest way to store your mesh data, new fields can be added according the renderer needs : 
@@ -40,6 +41,7 @@ If you want to create a 3D project you can now jump right in the [Rasterization 
 ### Importing
 
 *(scratchtomv)*  
+
 Importing an [OBJ](https://en.wikipedia.org/wiki/Wavefront\_.obj\_file) file is the easiest and most efficient way to import a mesh in Scratch.  
 Why use OBJ Files?
 

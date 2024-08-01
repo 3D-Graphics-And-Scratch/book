@@ -43,13 +43,14 @@
   Degrees work the same as radians, but they don’t need π to represent 1 full rotation, hence keeping the calculations simple. One full rotation in degrees is 360 degrees.  
 * You can convert from radians to degrees by multiplying the radians by 180, and from degrees to radians by multiplying by 180\. Scratch uses the degrees system, and that is what we will use throughout this guide.
 
-### ![][image2]
+![Circle Cos Sin](../images/image14.gif)
 
 ### 
 
 ### Matrices
 
 *(badatcode123, derpygamer2142, scratchtomv, Krypto)*  
+
 A matrix is an array of numbers or expressions with rows and columns. Matrices are useful for many things, they make expressing rotations or transformations very easy.   
 Computations with them will be often simplified in Scratch as literal expressions, so you don’t need to really understand them to make 3D projects. 
 
@@ -61,23 +62,33 @@ In scratch, we usually use 3x3 matrices instead of a 4x4 matrix. We use a 3x3 ma
 
 Matrix multiplication is performed by multiplying the corresponding rows and columns, then adding them together.   
 Here is an example in which the matrices ![][image3] and ![][image4]  are multiplied.  
+
 ![][image5]
 
 ### Rotation Matrix
 
 *(26243AJ)*  
+
 A rotation matrix is a transformation matrix that is used to apply rotation on a column vector using the right-hand rule. However, due to the nature of matrix multiplication, the right hand rule is only valid when multiplying the matrix by the point and not vice versa.
 
 The 2 dimensional form of this matrix has the following form:  
+
 ![][image6]  
+
 Where θ is the degree you want to rotate the vector by. Using this, a point can be rotated around (0,0) by simply applying matrix multiplication.  
+
 ![][image7]  
+
 Which can be simplified down to  
+
 ![][image8]
 
 In the third dimension, there are 3 basic rotations (rotation around the x axis, rotation around the y axis, and rotation around the z axis), and thus there are 3 general rotation matrices.  
+
 ![][image9]  
+
 Which can then be combined into one matrix by applying matrix multiplication  
+
 ![][image10]
 
 

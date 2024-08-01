@@ -1,5 +1,6 @@
 # Ray-marching
 *(badatcode123, derpygamer2142, jfs22)*  
+
 Raymarching is a method of ray-based 3D rendering that steps rays through a scene in order to approximate collisions. Raymarching is unique however, in that it uses Signed Distance Functions, or SDFs, to step by the most it can without hitting an object. When inside an object, SDFs return negative, hence the signed part of the name.  
 ![][image32]  
 A ray is considered to be intersecting an object when the SDF is less than some arbitrarily small threshold, often called “epsilon”. Additionally, to stop infinite steps when a ray does not hit an object, a maximum number of steps and maximum SDF size are usually used. When these factors are exceeded, the loop is broken.  
@@ -33,6 +34,7 @@ The arguments of this function are the point to find the distance to, the sphere
 ### Advanced SDFs/SDEs
 
 *(jfs22)*  
+
 Starting with a simple primitive, SDFs can be modified in many ways. Some of these modifications include domain repetition and various domain warping. These work because as a ray steps though a scene, it can be moved and warped in order to create the effect of moved and warped geometry.
 
 Stretching  
@@ -52,6 +54,7 @@ Examples
 ### Raymarched Normals {#raymarched-normals}
 
 *( jfs22, 26243AJ)*  
+
 Raymarched Normals can be approximated with multiple SDF samples, or in specific scenarios, can be skipped by using the directional derivative method.
 
 Solving the normal  
@@ -67,6 +70,7 @@ The directional derivative method utilizes the fact that for simple lighting (ie
 ### Advanced shadows {#advanced-shadows}
 
 *(jfs22, derpygamer2142)*  
+
 Although not cheap, simple shadows can be done just by shooting a ray from the surface of an object towards any light. This checks for any obstructions between the light, allowing simple, hard shadows. If the point at the surface of the object is obscured, it is dark. If it isn’t, it’s bright. In code, it is a simple if statement checking if the ray has hit.
 
 In reality, however, there is no particular line separating shadows, but instead a smooth transition between light and shadow. This gradient is called the penumbra, where not all of a light is illuminating an object. Although it’s impossible to calculate the penumbra in one ray, it can be approximated practically for free by storing the minimum of a simple division and multiplication. For each step of the shadow ray, (SDF/Distance of the ray)\*Sharpness constant is compared to the current minimum, and set if it is smaller. This works since near misses slowly transition from the SDF factor and the distance causes further points to fade out more, like in real life. In code, this is run every step of the ray, inside the “for loop” shown earlier;![][image41]

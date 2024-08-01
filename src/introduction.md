@@ -1,8 +1,6 @@
 # Scratch 3D Project Development  
 ## By the 3D Graphics and Scratch Group.
 
-Last Edited : 17/06/2024
-
 *This book is intended as a guide to modern Scratch graphics programming. There may be things mentioned but not covered in detail (maybe suggest starting points for research when this happens)*
 
 Creating 3D games or applications on Scratch might seem intimidating at first, but with this handy book you will be able to create simple to advanced 3D projects on Scratch.   
