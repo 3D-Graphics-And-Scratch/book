@@ -16,7 +16,8 @@ Many models, or BRDFs, exist for diffuse calculations, the most easiest and basi
 \=\> about specular lighting
 
 In graphics, it is common to combine both the specular and diffuse models, alongside the ambient value, for more realistic shading than just using one model, as seen below  
-![][image64]
+
+<img src="../images/image53.png">
 
 ## Shadows
 

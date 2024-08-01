@@ -2,10 +2,13 @@
 *(scratchtomv, jfs22, badatcode123, 26243AJ)*
 
 RGB to decimal:   
-![][image67]
+
+<img src="../images/image15.png">
 
 RGBA to decimal:   
-![][image68]
+
+<img src="../images/image37.png">
 
 HEX to decimal: (Scratch/JS will automatically do the conversion)  
-![][image69]
+
+<img src="../images/image50.png" width="400">

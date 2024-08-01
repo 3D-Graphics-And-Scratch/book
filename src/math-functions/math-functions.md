@@ -5,20 +5,27 @@
 Scratch doesn’t include a lot of useful mathematical or vector manipulation functions like in other programming languages. Here is a useful list of common math functions written in Scratch code : 
 
 **Dot product:** tells how alike 2 vectors are, if they are the same length. 1 means they are the same vector and \-1 means they are the exact opposites, and 0 means they are perpendicular to each other.  
-![][image84]
+
+<img src="../images/image80.png" width="600">
 
 **Exponents:** repeatedly multiplies x by itself y times.  
-![][image85]
 
-**Cross product:** gives a vector perpendicular to the 2 vectors inputted.![][image86]
+<img src="../images/image97.png" width="400">
+
+**Cross product:** gives a vector perpendicular to the 2 vectors inputted.
+
+<img src="../images/image81.png" width="400">
 
 **Test if triangle is ordered clockwise :** (useful for backface culling)  
-![][image87]
+
+<img src="../images/image24.png" width="600">
 
 **Normalize:** sets a vector’s magnitude to 1, while retaining its direction.  
-![][image88]
+
+<img src="../images/image79.png" width="600">
 
 **Transpose**: Rotating the matrix format (For inverse TBN since inverse is expensive and they do the same thing in that case.)  
-![][image89]
+
+<img src="../images/image55.png">
 
 # 

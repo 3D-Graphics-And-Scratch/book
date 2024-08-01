@@ -6,7 +6,9 @@ Ray-based techniques in 3D graphics use rays. Rays are defined by their origin (
 <img src="../images/image69.png" height="800">
 
 For each pixel we need to perform a function to do ray collisions, but first we need to define the ray origin and ray direction. The ray origin for this case is the camera position, and the ray direction is defined as   
-**`![][image28]`**  
+
+<img src="../images/image99.png">
+
 The focal length is how far the lens of the camera is from the aperture, this is inversely proportional to FOV and should be around 300\. With the ray origin and direction defined, we can now use the ray algorithms to move the rays.
 
 ## 

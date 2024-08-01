@@ -20,7 +20,8 @@ Here are the steps for an in-place quicksort algorithm:
 1. Partition by swapping the elements in a way so that all elements with values less than the pivot go before it, while elements with values bigger than the pivot come after it. Elements with values that are equal to the pivot can go either way. These swaps occur all-the-while keeping the pivot element’s position, which might move around during this step.  
 1. Recurse the algorithm from the beginning of the sub-range up to the point before that of the division. Apply it to the sub-range after the point of division as well. 
 
-![][image73]  
+<img src="../images/image11.png" height="600">
+
 *(From Wikipedia) Example of the Quicksort Algorithm on a random set of Numbers* 
 
 So, Vadik1’s sorting algorithm works quite like a quicksort, only that instead of comparing values, the side which a polygon lands relative to a pivot polygon determines which group it falls into.
@@ -55,7 +56,8 @@ Although the 3D implementations of BSP are 3D, of course, I will discuss 2D BSP 
 
 The below figure shows a set of four segments that constitute the scene. We want to split the world into two, and each part into two, and so on, in such a way so that each segment resides in its own unique subspace. There are unlimited ways to do this so the question is: How would we want to do this?
 
-![][image74]  
+<img src="../images/image30.png">
+
 *(From Wikipedia) A sample set of line segments in 2D space, and a list of the segments.* 
 
 The simplest way is to simply split the world along the lines of the segments themselves. Each node would contain the wall that splits this scene. This is to be done recursively until a unique subspace boundary is created for each segment. This spatial organization provides an unambiguous visibility ordering explained earlier with Vadik1’s algorithm. This can be seen further as we get to the traversal step later. 
@@ -68,30 +70,44 @@ An issue with choosing A as the splitting line is that there aren’t actually a
 
 The remaining segments are grouped into the list of segments in front of A(B2, C2, D2), and those behind (B1, C1, D1).
 
-![][image75]  
+<img src="../images/image36.png">
+
 *(From Wikipedia) The initial split along the line of segment A.*
 
 The algorithm is applied to the list of segments in front of A(B2, C2, D2). The front list is always processed first. Segment B2 is chosen and it is added to a new node. It splits D2 into both D2 and D3. Note that the new D2 is a split version of the old D2. D2 is added to the front list. C2 and D3 are added to the behind list.   
-![][image76]  
+
+<img src="../images/image19.png">
+
 *(From Wikipedia) The split on the list of segments in front of A. B2 is chosen in this step.*
 
 D2 is chosen and added to the node. Since it's the only one in its list, we stop there.  
-![][image77]  
+
+<img src="../images/image82.png">
+
 *(From Wikipedia) D2 is chosen and added to a node in front of B2. It is the last item, so nothing further needs to be done.*
 
 As we are done with the lines in front of the node containing B2, we start looking at the list of segments behind it. C2 is chosen and added to a new node. The other segment, D3, is added to the list of lines in front of C2.  
-![][image78]  
+
+<img src="../images/image76.png">
+
 *(From Wikipedia) C2 is chosen and added to a node behind B2.*
 
 D3 is added to a node. We stop here as it is the last segment in its list.  
-![][image79]  
+
+<img src="../images/image33.png">
+
 *(From Wikipedia) D3 is chosen and added to a node in front of C2.*
 
 Since all of the segments in front of A have been added to their own respective nodes, we recurse on the list of segments behind A. We choose B1. It's added to a node and C1 is put into the behind list, D1 into the front list.   
-![][image80]  
+
+<img src="../images/image27.png">
+
 *(From Wikipedia) B1 is added to a node, and C1 and D1 are grouped into their respective lists.*
 
 Finally, D1 is added to a node, then C1. The BSP tree is complete.  
-![][image81]  
-![][image82]  
+
+<img src="../images/image63.png">
+
+<img src="../images/image86.png">
+
 Now the BSP tree has been built, but it might not be immediately intuitive on how it helps with visibility ordering at all. 

@@ -6,6 +6,8 @@ In Scratch, the basic way of storing data is by using variables, which can conta
 Let’s take the example of a dog : we need dog objects with multiple information related to it, like his name, his age, his race, his owner, etc.  
 Would look like this in C\# : 
 
+<img src="../images/image67.png">
+
 It can also be represented as a table : 
 
 | Data index | Property name |
