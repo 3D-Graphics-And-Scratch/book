@@ -1,5 +1,5 @@
 # Painter’s algorithm
-*(SpinningCube)*  
+*SpinningCube*  
 
 Painter’s algorithm is used by a large portion of filled-surface 3D renderers on Scratch. The algorithm’s name alludes to the technique a painter would use to capture a scene. The painter paints the objects in the scene from back to front, starting with the most distant object they can see. Since each new brush stroke may cover up brush strokes already applied to the canvas, the objects painted last appear at the very front, not obstructed by anything, while objects further back have been partially covered by objects in front of them. This ensures that surfaces that are behind other surfaces can’t be seen in the painting, as we would expect.
 

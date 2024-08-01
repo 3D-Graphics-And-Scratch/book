@@ -1,5 +1,5 @@
 # Post-processing
-*(jfs22,badatcode123,26243AJ)*
+*jfs22,badatcode123,26243AJ*
 
 Post processing algorithms modify screen colors after all other effects, directly before rendering. These algorithms include tonemappers, gamma correction, color grading, and other color processing effects.
 

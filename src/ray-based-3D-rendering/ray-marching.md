@@ -1,5 +1,5 @@
 # Ray-marching
-*(badatcode123, derpygamer2142, jfs22)*  
+*badatcode123, derpygamer2142, jfs22*  
 
 Raymarching is a method of ray-based 3D rendering that steps rays through a scene in order to approximate collisions. Raymarching is unique however, in that it uses Signed Distance Functions, or SDFs, to step by the most it can without hitting an object. When inside an object, SDFs return negative, hence the signed part of the name.  
 
@@ -32,7 +32,7 @@ Next we can add a plane for one of the later articles, [shadows](#advanced-shado
 
 ### Useful primitives
 
-*(derpygamer2142)*  
+*derpygamer2142*  
 A primitive is a basic function(in this case that returns distance) that can be used to construct more complex functions. You can find a full list of the functions that are being adapted at [https://iquilezles.org/articles/distfunctions/](https://iquilezles.org/articles/distfunctions/)
 
 The arguments of this function are the point to find the distance to, the sphere’s position, and the sphere’s radius.  
@@ -41,7 +41,7 @@ The arguments of this function are the point to find the distance to, the sphere
 
 ### Advanced SDFs/SDEs
 
-*(jfs22)*  
+*jfs22*  
 
 Starting with a simple primitive, SDFs can be modified in many ways. Some of these modifications include domain repetition and various domain warping. These work because as a ray steps though a scene, it can be moved and warped in order to create the effect of moved and warped geometry.
 
@@ -62,7 +62,7 @@ Examples
 
 ### Raymarched Normals {#raymarched-normals}
 
-*( jfs22, 26243AJ)*  
+*jfs22, 26243AJ*  
 
 Raymarched Normals can be approximated with multiple SDF samples, or in specific scenarios, can be skipped by using the directional derivative method.
 
@@ -81,7 +81,7 @@ The directional derivative method utilizes the fact that for simple lighting (ie
 
 ### Advanced shadows {#advanced-shadows}
 
-*(jfs22, derpygamer2142)*  
+*jfs22, derpygamer2142*  
 
 Although not cheap, simple shadows can be done just by shooting a ray from the surface of an object towards any light. This checks for any obstructions between the light, allowing simple, hard shadows. If the point at the surface of the object is obscured, it is dark. If it isn’t, it’s bright. In code, it is a simple if statement checking if the ray has hit.
 
@@ -96,9 +96,3 @@ Once again, multiplying this lighting value by the color leaves a result similar
 <img src="../images/image83.png">
 
 ### Ambient occlusion
-
-*(jfs22)*
-
-## 
-
-## 

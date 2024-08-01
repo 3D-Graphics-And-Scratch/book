@@ -1,5 +1,5 @@
 # Color conversions
-*(scratchtomv, jfs22, badatcode123, 26243AJ)*
+*scratchtomv, jfs22, badatcode123, 26243AJ*
 
 RGB to decimal:   
 

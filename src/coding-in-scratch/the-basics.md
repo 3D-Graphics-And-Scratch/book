@@ -1,7 +1,7 @@
 # The Basics
 ### World
 
-*(derpygamer2142, scratchtomv, BamBozzle)*
+*derpygamer2142, scratchtomv, BamBozzle*
 
 * A standard 3d coordinate system is (x, y, z).  
 * The coordinate system used throughout this guide looks as follows:
@@ -14,7 +14,7 @@
 
 ### Vectors
 
-*(derpygamer2142, scratchtomv, BamBozzle)*
+*derpygamer2142, scratchtomv, BamBozzle*
 
 * A vector is a set of numbers similar to a coordinate. They usually describe a movement (called a translation) or direction in space. In 3D vectors are most often found with 3 values, denoted as x, y and z.   
 * A vector has a length that can be calculated thusly in 3D: x²+y²+z²   
@@ -22,7 +22,7 @@
 
 ### Geometry
 
-*(derpygamer2142, scratchtomv, BamBozzle, 26243AJ)*
+*derpygamer2142, scratchtomv, BamBozzle, 26243AJ*
 
 * A point is similar to a vector, having a specific number of values, usually 2 or 3 when working in 3 dimensions. They are used to describe a position in space.  
 * A ray is an infinite line in space defined by its origin (a point), and its direction (a vector).  
@@ -36,7 +36,7 @@
 
 ### Trigonometry
 
-*( scratchtomv, derpygamer2142)*
+*scratchtomv, derpygamer2142*
 
 * Sine, cosine, and tangent(often shortened to sin, cos, and tan) and their functional inverses of arcsine, arccosine, and arctangent(asin, acos, atan) are trigonometric functions. They are used to describe the relationship between lengths, angles, and more. The specifics aren’t really relevant to 3d graphics very often, and are mostly used for rotation.  
 * Trigonometry functions can either use an input in degrees or radians. Radians are a form of describing rotation as a position on a circle with a radius of 1\. One full rotation in radians is 2π.   
@@ -49,7 +49,7 @@
 
 ### Matrices
 
-*(badatcode123, derpygamer2142, scratchtomv, Krypto)*  
+*badatcode123, derpygamer2142, scratchtomv, Krypto*  
 
 A matrix is an array of numbers or expressions with rows and columns. Matrices are useful for many things, they make expressing rotations or transformations very easy.   
 Computations with them will be often simplified in Scratch as literal expressions, so you don’t need to really understand them to make 3D projects. 
@@ -67,7 +67,7 @@ Here is an example in which the matrices ![][image3] and ![][image4]  are multip
 
 ### Rotation Matrix
 
-*(26243AJ)*  
+*26243AJ*  
 
 A rotation matrix is a transformation matrix that is used to apply rotation on a column vector using the right-hand rule. However, due to the nature of matrix multiplication, the right hand rule is only valid when multiplying the matrix by the point and not vice versa.
 

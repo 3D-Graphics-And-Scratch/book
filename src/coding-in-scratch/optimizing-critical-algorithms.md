@@ -1,6 +1,6 @@
 # Optimizing critical algorithms
 ![](../images/image47.png)
-*(Krypto)*  
+*Krypto*  
 
 Some of Scratch’s blocks are very slow and you should avoid them the majority of the time you are coding. The main blocks you should avoid are the list contains , item \# of list blocks and touching blocks. As you can see in the chart above, they have an rtc of above 35\. Compared to addition blocks, they are at least 35 times slower. In most cases, you will not need to use these blocks. If you do need to use these blocks (Searching for a name in a list, color scanners etc.) you can probably replace them with better alternatives or bake them at start.
 
@@ -9,7 +9,7 @@ PICTURES HERE
 ### Complexity 
 
 \[God dammit my sleep deprived writing is terrible someone pls clean this up \- 26243AJ\]  
-*(26243AJ)*  
+*26243AJ*  
 
 Complexity is a measure of the performance of code when scaled up, and includes both memory and computational efficiency. It is most commonly expressed in Big O notation, which is a mathematical notation that expresses how an algorithm will scale based on the size of the input(s), n. 
 

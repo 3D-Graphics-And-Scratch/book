@@ -16,3 +16,5 @@ We recommend beginners to read the book in the correct order to not miss crucial
 * **In case of accidental griefing, contact admins or the author to restore the damage.**  
 * **Don’t overwhelm with too many details your work, it needs to be balanced all over the book.**  
 * **Add your name to the credits.**
+
+— The 3D Graphics And Scratch Group

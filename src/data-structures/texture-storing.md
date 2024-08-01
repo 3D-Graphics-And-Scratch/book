@@ -1,5 +1,5 @@
 # Texture storing
-*(scratchtomv)*
+*scratchtomv*
 
 There are two main ways of using textures in 3D projects : 
 
@@ -14,7 +14,7 @@ There are two main ways of using textures in 3D projects :
 
 ### Using a list
 
-*(scratchtomv)*  
+*scratchtomv*  
 
 Using a list to represent a texture is actually representing a 2D texture as an 1D array of colors. These colors need to be in a Scratch-compatible format.  If you’re not aware of color representations in Scratch, see [Handling colors in Scratch](../handling-colors-in-scratch/handling-colors-in-scratch.md).
 
@@ -35,7 +35,7 @@ One common method is to compress the textures using tools like this one made by 
 
 ### Using costumes
 
-*(scratchtomv)*  
+*scratchtomv*  
 
 Since the equations involved in projecting costumes to 3D are complex, Chrome\_Cat’s STTF 2 is often used: [https://scratch.mit.edu/projects/888667870/](https://scratch.mit.edu/projects/888667870/).
 

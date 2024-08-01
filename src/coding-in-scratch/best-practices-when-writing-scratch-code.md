@@ -1,5 +1,5 @@
 # Best practices when writing scratch code
-*(scratchtomv)*
+*scratchtomv*
 
 * Avoid using scratch comments.  
 * Find appropriate variable names.  

@@ -1,5 +1,5 @@
 # Path-tracing
-*(badatcode123,bambozzle)*  
+*badatcode123,bambozzle*  
 
 Path-tracing, a subset of raytracing, is a way to make highly realistic images. Path-tracing emulates how rays of light behave in the real world, to give more realistic results than other techniques at the cost of performance. In the real world, rays of light are emitted from light sources, and bounce around the world until they hit your eyes. As the light ray bounces off objects, some of the frequencies of light in it get absorbed, tinting the light. In path-tracing, the rays are shot from the camera and reflect around the scene until it hits a light source. This is because simulating rays from the light is wasteful, as most of these rays will not end up at the camera, and so will not affect the final image, but when the rays are shot from the camera, all rays are relevant to the final image. This is still accurate as light behaves the same whether it is moving forwards or backwards in time[^6]. 
 

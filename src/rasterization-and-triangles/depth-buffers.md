@@ -1,5 +1,5 @@
 # Depth Buffers
-*(urlocalcreator)*  
+*urlocalcreator*  
 
 In rendering using the scanline technique, using a depth buffer may be preferred rather than sorting triangles one by one. Using a depth buffer is fast, but at the consequence of forcing the scanline technique rather than a faster incircle filler.
 

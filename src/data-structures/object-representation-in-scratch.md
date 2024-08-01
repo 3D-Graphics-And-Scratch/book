@@ -1,5 +1,5 @@
 # Object representation in Scratch
-*(scratchtomv)*  
+*scratchtomv*  
 
 In Scratch, the basic way of storing data is by using variables, which can contain one information at a time. But how to store multiple pieces of information related to one object?
 
