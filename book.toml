@@ -4,5 +4,9 @@ language = "en"
 multilingual = false
 src = "src"
 title = "Scratch 3D Project Development"
-default-theme = "light"
 description = "This book is intended as a guide to modern Scratch graphics programming. Creating 3D games or applications on Scratch might seem intimidating at first, but with this handy book you will be able to create simple to advanced 3D projects on Scratch."
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "light"
+git-repository-url = "https://github.com/3D-Graphics-And-Scratch/Scratch-3D-Black-Book"
