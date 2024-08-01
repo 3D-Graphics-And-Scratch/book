@@ -7,34 +7,125 @@ The way of storing triangles is heavily defined by how it is used.  One method i
 
 This is the easiest way to store your mesh data, new fields can be added according the renderer needs : 
 
-|  | Quads |
-| :---- | :---- |
-| 1 | Vertex 1 index |
-| 2 | Vertex 2 index |
-| 3 | Vertex 3 index |
-| 4 | Vertex 4 index |
-| 5 | Material index |
+<div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
 
-|  | Vertex |
-| :---- | :---- |
-| 1 | X |
-| 2 | Y |
-| 3 | Z |
+  <div style="width: 48%; margin-bottom: 20px;">
+    <table style="width: 100%; border-collapse: collapse;">
+      <thead>
+        <tr>
+          <th style="text-align: left;">&nbsp;</th>
+          <th style="text-align: left;">Quads</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Vertex 1 index</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Vertex 2 index</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Vertex 3 index</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Vertex 4 index</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Material index</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-|  | Ngons |
-| :---- | :---- |
-| 1 | Vertex Start Index |
-| 2 | Polygon Vertex Length |
-| 3 | Material index |
+  <div style="width: 48%; margin-bottom: 20px;">
+    <table style="width: 100%; border-collapse: collapse;">
+      <thead>
+        <tr>
+          <th style="text-align: left;">&nbsp;</th>
+          <th style="text-align: left;">Vertex</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>X</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Y</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Z</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-|  | Triangle |
-| :---- | :---- |
-| 1 | Vertex 1 index |
-| 2 | Vertex 2 index |
-| 3 | Vertex 3 index |
-| 4 | Material index |
+  <div style="width: 48%; margin-bottom: 20px;">
+    <table style="width: 100%; border-collapse: collapse;">
+      <thead>
+        <tr>
+          <th style="text-align: left;">&nbsp;</th>
+          <th style="text-align: left;">Ngons</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Vertex Start Index</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Polygon Vertex Length</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Material index</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-If you want to create a 3D project you can now jump right in the [Rasterization and Triangles](\#rasterization-and-triangles) chapter.
+  <div style="width: 48%; margin-bottom: 20px;">
+    <table style="width: 100%; border-collapse: collapse;">
+      <thead>
+        <tr>
+          <th style="text-align: left;">&nbsp;</th>
+          <th style="text-align: left;">Triangle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Vertex 1 index</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Vertex 2 index</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Vertex 3 index</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Material index</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+
+If you want to create a 3D project you can now jump right in the [Rasterization and Triangles](../rasterization-and-triangles/rasterization-and-triangles.md) chapter.
+
 
 ### 
 
