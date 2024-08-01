@@ -1,0 +1,2 @@
+# Grids
+Most 3D Engines are used to render arbitrary scenes \- scenes where any 2 objects, polygons, points etc. have no defined relationship to each other. This gives greater flexibility, however there are some cases where greater performance can be gained by allowing certain assumptions. By far the most common is the rectilinear grid \- grids constructed from squares (or voxels in the 3-dimensional case). The properties of grids allow major optimisations to be made in both projection- and ray-based engines. 

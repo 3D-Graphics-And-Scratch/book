@@ -30,14 +30,12 @@
     - [Photon-Mapping](./ray-based-3D-rendering/photon-mapping.md)
 
  - [Sprite-Based Rendering](./sprite-based-rendering/sprite-based-rendering.md)
-    - [Overview](./sprite-based-rendering/overview.md)
-    - [Implementation](./sprite-based-rendering/implementation.md)
     - [Stamp Based Engine](./sprite-based-rendering/stamp-based-engine.md)
     - [Clone Based Engine](./sprite-based-rendering/clone-based-engine.md)
 
- - [Voxels](./voxels/voxels.md)
-    - [Raster](./voxels/projection.md)
-    - [DDA](./voxels/dda.md)
+ - [Grids](./grids/grids.md)
+    - [Raster](./grids/projection.md)
+    - [DDA](./grids/dda.md)
 
  - [Shading](./shading/shading.md)
 
@@ -45,6 +43,8 @@
     - [Color representation in Scratch](./handling-colors-in-scratch/color-representation-in-scratch.md)
     - [Color conversions](./handling-colors-in-scratch/color-conversions.md)
     - [Post-processing](./handling-colors-in-scratch/post-processing.md)
+
+ - [BSP](./bsp/bsp.md)
 
  - [Physics](./physics/physics.md)
 
