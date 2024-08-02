@@ -34,8 +34,8 @@
     - [Clone Based Engine](./sprite-based-rendering/clone-based-engine.md)
 
  - [Grids](./grids/grids.md)
-    - [Raster](./grids/projection.md)
-    - [DDA](./grids/dda.md)
+    - [Projection](./grids/projection.md)
+    - [Ray Based](./grids/ray-based.md)
 
  - [Shading](./shading/shading.md)
 

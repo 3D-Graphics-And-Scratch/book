@@ -14,7 +14,7 @@ Many models, or BRDFs, exist for diffuse calculations, the most easiest and basi
 
 ## Specular models
 
-\=\> about specular lighting
+### Combined
 
 In graphics, it is common to combine both the specular and diffuse models, alongside the ambient value, for more realistic shading than just using one model, as seen below  
 
@@ -27,6 +27,8 @@ In graphics, it is common to combine both the specular and diffuse models, along
 ### Ray-based
 
 Hard shadows can be achieved by shooting rays directly at the light sources from an object’s surface. If the ray is blocked by some object before reaching the light source, that point on the surface is in shadow.
+
+Raymarching can make an approximation of soft shadows, explained in the raymarching section.
 
 ### Rasterizer
 
