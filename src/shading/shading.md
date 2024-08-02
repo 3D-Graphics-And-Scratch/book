@@ -1,4 +1,5 @@
 # Shading
+*SpinningCube*
 ## Material {#material}
 
 Diffuse objects are objects that reflect light completely randomly, meaning the outgoing and incoming directions have no relationship. This is often called lambertian reflectance.
@@ -17,7 +18,9 @@ Many models, or BRDFs, exist for diffuse calculations, the most easiest and basi
 
 In graphics, it is common to combine both the specular and diffuse models, alongside the ambient value, for more realistic shading than just using one model, as seen below  
 
-<img src="../images/image53.png">
+<img src="../images/shading.png">
+
+*By SpinningCube*
 
 ## Shadows
 

@@ -96,3 +96,16 @@ Once again, multiplying this lighting value by the color leaves a result similar
 <img src="../images/image83.png">
 
 ### Ambient occlusion
+*jfs22*
+
+Ambient occlusion is one of many techniques used to replicate path traced graphics. This simulates ambient light being occluded by surrounding elements, often seen in corners. Taking advantage of our distance estimates, we can sample points at varying distances in the normal direction, and compare the distance estimates. 
+
+<img src="../images/ambient occlusion.png" width="400">
+
+You can see how this works on the diagram on the right, where the yellow lines represent the distance estimates, and the pink lines represent the distance from the original point. In a perfectly flat section, the yellow distance is equal to the pink distance, but on occluded corners, you can see that the yellow distance is significantly less. We can model this by subtracting yellow from pink for each sample, adding them up, and multiplying by a value controlling the strength of the effect. You may notice however, that your ambient occlusion seems to be reversed. This is fixed simply by subtracting from one resulting in this:
+
+<img src="../images/ambient occlusion equation 1.png">
+
+Like above, k represents the strength of the ambient occlusion, while j represents how many samples you take. There is one last change to make, however. Using this model, far away samples contribute equally to the ambient value, which can leave unnatural results. You can optionally have further points contribute exponentially less to fix this, multiplying samples by smaller and smaller amounts as follows:
+
+<img src="../images/ambient occlusion equation 2.png">

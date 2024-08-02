@@ -20,7 +20,7 @@ To combat this, most modern displays apply a gamma function to the input rgb col
 
 Although this is great news for our eyes, lighting calculations in 3d graphics utilize linear RGB. Thus, when we sample an sRGB color/texture, we first need to convert it to RGB. This can be done by raising the color values to the power of 2.2. Likewise, when we display the RGB values, we need to revert them to sRGB by raising them to the power of 1/2.2. *(by 26243AJ)*  
 Note that this is only an approximation, the full conversion can be found below  
-[https://www.desmos.com/calculator/5kppnk4gkx](https://www.desmos.com/calculator/5kppnk4gkx) (*by spinningcube*)  
+[https://www.desmos.com/calculator/5kppnk4gkx](https://www.desmos.com/calculator/5kppnk4gkx) (*by SpinningCube*)  
 Using the exponent workaround, we can apply the *x*1/2.2 adjustment on Scratch:
 
 <img src="../images/image89.png" width="400">
