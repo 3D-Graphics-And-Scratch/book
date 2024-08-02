@@ -1,6 +1,37 @@
 .scratch-block {
-    border: 4px dashed rgb(183, 183, 183);
+    /*border: 4px dashed rgb(200, 200, 200);*/
     padding: 10px;
+    background-color: rgb(240, 240, 240);
+    /*box-shadow: 5px 5px rgba(0, 0, 0, 0.5);*/
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+
+    background-image: radial-gradient(rgb(230, 230, 230) 3px, transparent 0);
+    background-size: 40px 40px;
+    background-position: -19px -19px;
+
+    width: 90%;
+    padding: 5%;
+    height: auto;
+
+    animation: moveBackground 100s linear infinite;
+    transition: transform 0.3s ease;
+    /*position: absolute;
+    left: 50%;
+    transform: translateX(-50%);*/
+}
+
+.scratch-block:hover {
+    transform: scale(1.1);
+}
+
+@keyframes moveBackground {
+    from {
+        background-position: -19px -19px;
+    }
+    to {
+        background-position: 1000px 1000px;
+    }
 }
 
 .centered {

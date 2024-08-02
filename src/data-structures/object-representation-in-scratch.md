@@ -26,7 +26,7 @@ This simple scratch function create a dog (works for any kind of objects) :
 
 …And is used like that  
 
-<img src="../images/image12.png" class="scratch-block">
+<img src="../images/image12.png">
 
 The object data can be accessed with two methods :   
 This is the fastest way, but you need to increment the dog index by 4 when looping through the list of dogs :   
