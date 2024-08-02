@@ -54,4 +54,6 @@
 
  - [Glossary](./glossary.md)
 
- - [Credits](./credits.md)
+---
+
+[Credits](./credits.md)

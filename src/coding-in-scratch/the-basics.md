@@ -1,18 +1,16 @@
 # The Basics
-### World
+## World
 
 *derpygamer2142, scratchtomv, BamBozzle*
 
-* A standard 3d coordinate system is (x, y, z).  
+* A standard 3D coordinate system is (x, y, z).  
 * The coordinate system used throughout this guide looks as follows:
 
 ![][image1]
 
-* The origin is the point in 3d space that has the coordinates (0,0,0)
+* The `origin` is the point in 3d space that has the coordinates (0,0,0).
 
-### 
-
-### Vectors
+## Vectors
 
 *derpygamer2142, scratchtomv, BamBozzle*
 
@@ -20,7 +18,7 @@
 * A vector has a length that can be calculated thusly in 3D: x²+y²+z²   
 * Dividing each component of a vector by the vector's length is called “normalizing”, and results in a vector of length 1\. 
 
-### Geometry
+## Geometry
 
 *derpygamer2142, scratchtomv, BamBozzle, 26243AJ*
 
@@ -32,9 +30,7 @@
 * A quadrilateral (commonly referred to as a quad) is made up of 4 points. Although not many scratch 3d engines directly support the rendering of quads (further elaborated upon in later chapters), they are often used in 3d models, making them an important aspect to consider when creating a 3d mesh / object loader.  
 * An n-gon is a shape made up of an n number of points. In scratch these are almost never directly rendered, and are instead split up into many triangles within the object loader. (further elaborated upon in later chapters) 
 
-### 
-
-### Trigonometry
+## Trigonometry
 
 *scratchtomv, derpygamer2142*
 
@@ -45,9 +41,7 @@
 
 ![Circle Cos Sin](../images/image14.gif)
 
-### 
-
-### Matrices
+## Matrices
 
 *badatcode123, derpygamer2142, scratchtomv, Krypto*  
 
@@ -65,7 +59,7 @@ Here is an example in which the matrices ![][image3] and ![][image4]  are multip
 
 ![][image5]
 
-### Rotation Matrix
+## Rotation Matrix
 
 *26243AJ*  
 
