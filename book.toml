@@ -10,6 +10,7 @@ description = "This book is intended as a guide to modern Scratch graphics progr
 default-theme = "light"
 preferred-dark-theme = "light"
 git-repository-url = "https://github.com/3D-Graphics-And-Scratch/book/"
+additional-css = ["css/custom.css"]
 
 [output.html.print]
 page-break = true

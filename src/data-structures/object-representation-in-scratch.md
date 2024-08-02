@@ -21,22 +21,22 @@ It can also be represented as a table :
 
 This simple scratch function create a dog (works for any kind of objects) :   
 
-<img src="../images/image42.png" width="400">
+<img src="../images/image42.png" width="400" class="scratch-block">
 
 
 …And is used like that  
 
-<img src="../images/image12.png">
+<img src="../images/image12.png" class="scratch-block">
 
 The object data can be accessed with two methods :   
 This is the fastest way, but you need to increment the dog index by 4 when looping through the list of dogs :   
 
-<img src="../images/image54.png">
+<img src="../images/image54.png" class="scratch-block">
 
 This way is a bit slower and uses one more block, but is more straightforward :   
 
-<img src="../images/image72.png">
+<img src="../images/image72.png" class="scratch-block">
 
 This example accesses the age of the dog \#0, and returns the second item for this dog, in this case 4 :   
 
-<img src="../images/image46.png" width="400">
+<img src="../images/image46.png" width="400" class="scratch-block">

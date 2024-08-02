@@ -1,0 +1,11 @@
+.scratch-block {
+    border: 4px dashed rgb(183, 183, 183);
+    padding: 10px;
+}
+
+.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}

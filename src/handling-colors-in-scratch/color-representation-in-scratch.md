@@ -8,8 +8,8 @@ Scratch doesn’t natively support RGB colors, you need to convert to a supporte
 
 The pen color can be set with this block :   
 
-<img src="../images/image96.png" width="400">
+<img src="../images/image96.png" width="400" class="scratch-block">
 
 Or with the combination of these blocks (uses the HSVA model, and is slower) :   
 
-<img src="../images/image6.png" width="400">
+<img src="../images/image6.png" width="400" class="scratch-block">

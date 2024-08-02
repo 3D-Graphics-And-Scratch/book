@@ -13,22 +13,22 @@ Path-tracing, a subset of raytracing, is a way to make highly realistic images. 
 Make sure to set all the color channels in the throughput to 1 and the emissive’s to 0 before shooting the ray from the camera. We should also add a `is light?` boolean to the intersections to determine when objects are light sources and we can stop tracing the ray. We should also multiply the throughput by the dot product between the outgoing direction and the normal vector (see the math section), this is because light is more spread out at steep angles so there is less light hitting a particular point overall, this effect can be shown with the below image, we do the dot product with the outgoing direction rather than the incoming direction because we are doing the light calculations in reverse. 
 Here’s the code for the normal of a sphere and how to use it.  
 
-<img src="../images/image10.png">
+<img src="../images/image10.png" class="scratch-block">
 
-<img src="../images/image18.png">
+<img src="../images/image18.png" class="scratch-block">
 
 With the surface normal we can make a simple diffuse sphere.  Diffuse means that the outgoing ray direction is completely random, so we need to be able to generate a random unit vector, then check that this random vector is in the correct orientation (facing the same side as the normal), to do this, take the dot product between the normal and the random vector, if it is less than 0, we invert the random vector. We can then set it as the ray direction. We then shoot the ray again, but from the intersection point and the new ray direction. Make sure to move the ray to the intersection point *before* generating the new outgoing direction.  
 
-<img src="../images/image9.png" width="400">
+<img src="../images/image9.png" width="400" class="scratch-block">
 
-<img src="../images/image35.png" width="400">
+<img src="../images/image35.png" width="400" class="scratch-block">
 
 *From SpinningCube*
 
 Now we can make a loop that represents the ray bounces, how many times it repeats is the amount of bounces around the scene the ray does. Defining a scene custom block can make it easier to edit and make the scene.  
 The ray bounces loop then looks like this:  
 
-<img src="../images/image88.png">
+<img src="../images/image88.png" class="scratch-block">
 
 Now when rendering, it should look like this  
 
@@ -36,7 +36,7 @@ Now when rendering, it should look like this
 
 However, this image is very noisy. This is because we are only sending one ray per pixel (1 sample), when we really should be trying to send as many as possible. There are 2 ways to do more samples, store the render in a buffer and keep rendering the scene and averaging the colors in the buffer and the colors in the render, or do all the samples at once using a repeat block, adding up the colors of the different samples and dividing by the amount of samples we took. We will be doing the second method since it is easier.  
 
-<img src="../images/image95.png">
+<img src="../images/image95.png" class="scratch-block">
 
 Now we can easily decrease the noisiness of the image by increasing the sample count, at the cost of speed. Here is the same scene from before but with 20 samples  
 

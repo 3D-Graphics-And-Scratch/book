@@ -23,7 +23,7 @@ Note that this is only an approximation, the full conversion can be found below
 [https://www.desmos.com/calculator/5kppnk4gkx](https://www.desmos.com/calculator/5kppnk4gkx) (*by SpinningCube*)  
 Using the exponent workaround, we can apply the *x*1/2.2 adjustment on Scratch:
 
-<img src="../images/image89.png" width="400">
+<img src="../images/image89.png" width="400" class="scratch-block">
 
 ### Color grading
 
