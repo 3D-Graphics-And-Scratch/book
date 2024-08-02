@@ -5,7 +5,7 @@
  - [Coding In Scratch](./coding-in-scratch/coding-in-scratch.md)
      - [The Basics](./coding-in-scratch/the-basics.md)
      - [Best practices when writing scratch code](./coding-in-scratch/best-practices-when-writing-scratch-code.md)
-     - [Using debug tools](./coding-in-scratch/using-debug-tools.md)
+     - [Running Scratch code](./coding-in-scratch/running-scratch-code.md)
      - [Optimizing critical algorithms](./coding-in-scratch/optimizing-critical-algorithms.md)
 
  - [Data Structures](./data-structures/data-structures.md)
