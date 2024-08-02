@@ -9,4 +9,4 @@ description = "This book is intended as a guide to modern Scratch graphics progr
 [output.html]
 default-theme = "light"
 preferred-dark-theme = "light"
-git-repository-url = "https://github.com/3D-Graphics-And-Scratch/Scratch-3D-Black-Book"
+git-repository-url = "https://github.com/3D-Graphics-And-Scratch/book/"
