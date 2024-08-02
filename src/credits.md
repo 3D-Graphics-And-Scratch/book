@@ -1,5 +1,5 @@
 # Credits
-## Contributors
+## Authors
 - scratchtomv
 - BamBozzle
 - badatcode123

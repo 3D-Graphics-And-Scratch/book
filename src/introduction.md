@@ -1,3 +1,5 @@
+<img src="./images/banner 3dgas.png">
+
 # Scratch 3D Project Development  
 *By the [3D Graphics and Scratch Group](https://scratch.mit.edu/studios/32030084/).*
 
