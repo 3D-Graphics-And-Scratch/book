@@ -19,7 +19,8 @@
 
 **Magnitude** : The length of a vector.
 
-**Mesh :** A collection of faces, edges and vertices that define the object's shape. 
+#### Mesh : {.mesh}
+A collection of faces, edges and vertices that define the object's shape.
 
 **Model Space :** *(also known as; Object Space, Local Space)* 3D coordinates relative to another point of reference, typically used to store meshes of individual models/objects.
 

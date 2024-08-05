@@ -1,7 +1,7 @@
 # Mesh data in scratch
 ### Storing
 
-*scratchtomv, krypto*  
+*scratchtomv, krypto*
 
 The way of storing triangles is heavily defined by how it is used.  One method is storing all triangles and all the vertices in two lists. The mesh data can be easily accessed by looping through these lists.
 
