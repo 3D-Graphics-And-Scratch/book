@@ -1,47 +1,70 @@
 # Glossary
-**AABB :** (Axis-Aligned Bounding Box) A Bounding box aligned with the axes of the coordinate system.
 
-**Buffer :** A section of memory used for temporary data storage. 
+#### AABB : {.aabb} 
+Axis-Aligned Bounding Box (AABB) - A Bounding box aligned with the axes of the coordinate system.
 
-**BVH :** (Bounding Volume Hierarchy) An acceleration structure made of primitive 3D objects that speeds up ray-casting and various algorithms. 
+#### Buffer : {.buffer} 
+A section of memory used for temporary data storage.
 
-**Camera Space :** *(also known as; View Space, Eye Space)* 3D information of 3D coordinates projected relative to the camera. Includes relative depth. 
+#### BVH : {.bvh} 
+Bounding Volume Hierarchy (BVH) - An acceleration structure made of primitive 3D objects that speeds up ray-casting and various algorithms.
 
-**Depth Buffer :** An additional screen-space buffer that provides depth information.
+#### Camera Space : {.camera-space} 
+*(also known as; View Space, Eye Space)* - 3D information of 3D coordinates projected relative to the camera. Includes relative depth.
 
-**DOF :** (Depth of field) The distance between the nearest and the furthest objects that are in acceptably sharp focus in an image captured with a camera.
+#### Depth Buffer : {.depth-buffer} 
+An additional screen-space buffer that provides depth information.
 
-**Epsilon :** A very small value, mostly used to prevent floating point inaccuracies and to set raymarching limits.
+#### DOF : {.dof} 
+Depth of Field (DOF) - The distance between the nearest and the furthest objects that are in acceptably sharp focus in an image captured with a camera.
 
-**Focal length :** Camera property that indicates how strongly it converges or diverges light. Inversely proportional to the FOV.
+#### Epsilon : {.epsilon} 
+A very small value, mostly used to prevent floating point inaccuracies and to set raymarching limits.
 
-**FOV :** (Field of view) The angular extent of the world that is seen. Inversely proportional to the focal length.
+#### Focal length : {.focal-length} 
+A camera property that indicates how strongly it converges or diverges light. Inversely proportional to the FOV.
 
-**Magnitude** : The length of a vector.
+#### FOV : {.fov} 
+Field of View (FOV) - The angular extent of the world that is seen. Inversely proportional to the focal length.
 
-#### Mesh : {.mesh}
-A collection of faces, edges and vertices that define the object's shape.
+#### Magnitude : {.magnitude} 
+The length of a vector.
 
-**Model Space :** *(also known as; Object Space, Local Space)* 3D coordinates relative to another point of reference, typically used to store meshes of individual models/objects.
+#### Mesh : {.mesh} 
+A collection of faces, edges, and vertices that define the object's shape.
 
-**Normal :** A vector perpendicular to the surface of an object.
+#### Model Space : {.model-space} 
+*(also known as; Object Space, Local Space)* - 3D coordinates relative to another point of reference, typically used to store meshes of individual models/objects.
 
-**Pen :** A vanilla Scratch extension used to draw on the screen 
+#### Normal : {.normal} 
+A vector perpendicular to the surface of an object.
 
-**Procedural :** Defined by code
+#### Pen : {.pen} 
+A vanilla Scratch extension used to draw on the screen.
 
-**Rasterizer :** An algorithm which draws objects to the screen by filling in shapes pixel-by-pixel.
+#### Procedural : {.procedural} 
+Defined by code.
 
-**Ray :** Defined by its origin (a position in 3D space where the ray starts) and its direction (A vector parallel to the direction of the ray).
+#### Rasterizer : {.rasterizer} 
+An algorithm that draws objects to the screen by filling in shapes pixel-by-pixel.
 
-**Screen Space :** *(also known as; Clip Space)* 2D information of 3D coordinates projected to the screen. Does not include depth information.
+#### Ray : {.ray} 
+Defined by its origin (a position in 3D space where the ray starts) and its direction (a vector parallel to the direction of the ray).
 
-**SDF :** Signed distance field; a function defining distance to the surface of an object with interior points being negative, and exterior being positive
+#### Screen Space : {.screen-space} 
+*(also known as; Clip Space)* - 2D information of 3D coordinates projected to the screen. Does not include depth information.
 
-**Vector :** An object having direction as well as magnitude, especially as determining the position of one point in space relative to another.
+#### SDF : {.sdf} 
+Signed Distance Field (SDF) - A function defining distance to the surface of an object with interior points being negative, and exterior being positive.
 
-**Vertex :** A point with a coordinate vector.
+#### Vector : {.vector} 
+An object having direction as well as magnitude, especially as determining the position of one point in space relative to another.
 
-**Viewing Frustum :** The region of space in the modeled world that may appear on the screen
+#### Vertex : {.vertex} 
+A point with a coordinate vector.
 
-**World Space :** 3D coordinates relative to the center of the world, typically (0, 0, 0\)
+#### Viewing Frustum : {.viewing-frustum} 
+The region of space in the modeled world that may appear on the screen.
+
+#### World Space : {.world-space} 
+3D coordinates relative to the center of the world, typically (0, 0, 0).
