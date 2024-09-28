@@ -15,20 +15,49 @@
 *derpygamer2142, scratchtomv, BamBozzle*
 
 * A vector is a set of numbers similar to a coordinate. They usually describe a movement (called a translation) or direction in space. In 3D vectors are most often found with 3 values, denoted as x, y and z.   
+
+<img src="../images/vector.png">
+
 * A vector has a length that can be calculated thusly in 3D: x²+y²+z²   
+
+<img src="../images/vector_length.png">
+
 * Dividing each component of a vector by the vector's length is called “normalizing”, and results in a vector of length 1\. 
+
+<img src="../images/vectors.png">
 
 ## Geometry
 
 *derpygamer2142, scratchtomv, BamBozzle, 26243AJ*
 
 * A point is similar to a vector, having a specific number of values, usually 2 or 3 when working in 3 dimensions. They are used to describe a position in space.  
+
+<img src="../images/point.png">
+
 * A ray is an infinite line in space defined by its origin (a point), and its direction (a vector).  
+
+<img src="../images/ray.png">
+
 * A normal is a vector perpendicular to a surface. These are often normalized, but are not necessarily.   
+
+<img src="../images/normal.png">
+
 * A plane is an infinite flat surface that extends across space. They can be defined in a number of ways, but most often by their normal (the direction the face of the plane is pointing) and their distance from the origin.  
+
+<img src="../images/plane.png">
+
 * A triangle is made up of 3 points, with the space between them filled in. Triangles are commonly used in 3d graphics because you can make any shape out of them.  
+
+<img src="../images/triangle.png">
+
 * A quadrilateral (commonly referred to as a quad) is made up of 4 points. Although not many scratch 3d engines directly support the rendering of quads (further elaborated upon in later chapters), they are often used in 3d models, making them an important aspect to consider when creating a 3d mesh / object loader.  
+
+<img src="../images/quadrilateral.png">
+
 * An n-gon is a shape made up of an n number of points. In scratch these are almost never directly rendered, and are instead split up into many triangles within the object loader. (further elaborated upon in later chapters) 
+
+<img src="../images/ngons.png">
+
 
 ## Trigonometry
 
