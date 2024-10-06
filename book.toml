@@ -11,7 +11,7 @@ default-theme = "light"
 preferred-dark-theme = "light"
 git-repository-url = "https://github.com/3D-Graphics-And-Scratch/book/"
 additional-css = ["css/custom.css"]
-additional-js = ["js/custom.js"]
+additional-js = ["js/custom.js", "js/scratchblocks.js"]
 
 [output.html.print]
 page-break = true

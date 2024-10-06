@@ -29,6 +29,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     }
 
+    loadScratchblocks();
+
     fetch('../glossary.json')
         .then(response => response.json())
         .then(data => {
@@ -55,4 +57,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 function escapeString(str) {
     return JSON.stringify(str).slice(1, -1);
+}
+
+function loadScratchblocks() {
+    scratchblocks.renderMatching("code.language-blocks", {
+        style: "scratch3",
+        scale: 0.75,
+    })
 }
