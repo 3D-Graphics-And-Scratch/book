@@ -78,7 +78,7 @@ body {
 
 .language-blocks {
     background-color: rgb(240, 240, 240);
-    background-image: radial-gradient(rgb(230, 230, 230) 3px, transparent 0);
+    background-image: radial-gradient(rgb(230, 230, 230) 2px, transparent 0);
     background-size: 40px 40px;
     background-position: -19px -19px;
     animation: moveBackground 100s linear infinite;
