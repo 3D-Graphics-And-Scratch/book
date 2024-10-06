@@ -8,7 +8,13 @@ Raymarching is a method of ray-based 3D rendering that steps rays through a scen
 A ray is considered to be intersecting an object when the SDF is less than some arbitrarily small threshold, often called “epsilon”. Additionally, to stop infinite steps when a ray does not hit an object, a maximum number of steps and maximum SDF size are usually used. When these factors are exceeded, the loop is broken.  
 SDFs tend to be far simpler than ray-surface intersection functions, for example, here is the SDF to a sphere, which is just the distance to the center minus the radius of the sphere:  
 
-<img src="../images/image94.png" class="scratch-block">
+```blocks
+define SDF to sphere| sphere pos: (sx) (sy) (sz) radius (r)
+    set [distance v] to (([sqrt v] of (((((ray origin x) - (sx)) * ((ray origin x) - (sx))) + (((ray origin y) - (sy)) * ((ray origin y) - (sy)))) + (((ray origin z) - (sz)) * ((ray origin z) - (sz))))) - (r))
+    if <(distance::variables) < (SDF distance)> then
+        set [SDF distance v] to (distance::variables)
+    end
+```
 
 In each step of the ray, the following occurs;  
 1\. The SDF is sampled at the current ray position  
@@ -16,7 +22,11 @@ In each step of the ray, the following occurs;
 3\. The factors used to abort the loop are checked  
 After each SDF sample, the ray is stepped accordingly;  
 
-<img src="../images/image65.png" width="400" class="scratch-block">
+```blocks
+change [ray x v] by ((ray direction x) * (SDF distance))
+change [ray y v] by ((ray direction y) * (SDF distance))
+change [ray z v] by ((ray direction z) * (SDF distance))
+```
 
 We can color each pixel based on what condition is met. In the below image, pixels that stopped because the nearest SDF was less than the epsilon are colored white, and pixels that either exceeded the maximum number of steps or exceeded the maximum SDF distance are colored black:  
 
@@ -37,7 +47,10 @@ A primitive is a basic function(in this case that returns distance) that can be 
 
 The arguments of this function are the point to find the distance to, the sphere’s position, and the sphere’s radius.  
 
-<img src="../images/image57.png" class="scratch-block">
+```blocks
+define Sphere sdf to point (x) (y) (z) sphere pos (sx) (sy) (sz) radius (radius)
+    set [Sphere SDF return dist v] to (([sqrt v] of (((((sx) - (x)) * ((sx) - (x))) + (((sy) - (y)) * ((sy) - (y)))) + (((sz) - (z)) * ((sz) - (z))))) - (radius))
+```
 
 ### Advanced SDFs/SDEs
 
@@ -73,7 +86,26 @@ In 3d, you can sample 6 points, one on each axis. This works, but is not optimal
 
 <img src="../images/image52.png">
 
-<img src="../images/image29.png" height="800" class="scratch-block">
+```blocks
+define get normal at point (x) (y) (z)
+    Scene SDF ((x) + (0.001)) ((y) - (0.001)) ((z) - (0.001)) :: custom
+    set [normal x v] to (SDF)
+    set [normal y v] to (() - (SDF))
+    set [normal z v] to (() - (SDF))
+    Scene SDF ((x) - (0.001)) ((y) - (0.001)) ((z) + (0.001)) :: custom
+    change [normal x v] by (() - (SDF))
+    change [normal y v] by (() - (SDF))
+    change [normal z v] by (SDF)
+    Scene SDF ((x) - (0.001)) ((y) + (0.001)) ((z) - (0.001)) :: custom
+    change [normal x v] by (() - (SDF))
+    change [normal y v] by (SDF)
+    change [normal z v] by (() - (SDF))
+    Scene SDF ((x) + (0.001)) ((y) + (0.001)) ((z) + (0.001)) :: custom
+    change [normal x v] by (SDF)
+    change [normal y v] by (SDF)
+    change [normal z v] by (SDF)
+    normalize (normal x) (normal y) (normal z) :: custom
+```
 
 Directional derivatives
 
@@ -89,7 +121,11 @@ Although not cheap, simple shadows can be done just by shooting a ray from the s
 
 In reality, however, there is no particular line separating shadows, but instead a smooth transition between light and shadow. This gradient is called the penumbra, where not all of a light is illuminating an object. Although it’s impossible to calculate the penumbra in one ray, it can be approximated practically for free by storing the minimum of a simple division and multiplication. For each step of the shadow ray, (SDF/Distance of the ray)\*Sharpness constant is compared to the current minimum, and set if it is smaller. This works since near misses slowly transition from the SDF factor and the distance causes further points to fade out more, like in real life. In code, this is run every step of the ray, inside the “for loop” shown earlier;
 
-<img src="../images/image32.png" width="400" class="scratch-block">
+```blocks
+if <(((Sharpness) * (SDE)) / (Ray Length)) < (Shadow)> then
+    set [Shadow v] to (((Sharpness) * (SDE)) / (Ray Length))
+end
+```
 
 Once again, multiplying this lighting value by the color leaves a result similar to this:  
 

@@ -3,12 +3,21 @@
 
 RGB to decimal:   
 
-<img src="../images/image15.png" class="scratch-block">
+```blocks
+define RGB to Decimal (R) (G) (B)
+    set pen color to ((round (B)) + ((256) * ((round (G)) + ((256) * (round (R))))))
+```
 
 RGBA to decimal:   
 
-<img src="../images/image37.png" class="scratch-block">
+```blocks
+define RGBA to Decimal (R) (G) (B) (A)
+    set pen color to ((round (R)) + ((256) * ((round (G)) + ((256) * ((round (R)) + ((256) * (round (A))))))))
+```
 
 HEX to decimal: (Scratch/JS will automatically do the conversion)  
 
-<img src="../images/image50.png" width="400" class="scratch-block">
+```blocks
+define HEX to Decimal (HEX)
+    set pen color to (join [0x] (HEX))
+```
