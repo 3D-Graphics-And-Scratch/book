@@ -27,7 +27,6 @@ define Add dog (name, age, race, owner)
     add (age) to [my dogs v]
     add (race) to [my dogs v]
     add (owner) to [my dogs v]
-end
 ```
 
 …And is used like that  
