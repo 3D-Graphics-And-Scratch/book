@@ -1,2 +1,2 @@
 # BSP sorting
-\=\> ([redirected](../bsp/bsp.md) by littlebunny06)
+[See this article](../bsp/bsp.md) by littlebunny06.

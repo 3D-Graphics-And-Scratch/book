@@ -46,7 +46,7 @@
 
  - [BSP](./bsp/bsp.md)
 
- - [Physics](./physics/physics.md)
+ - [Movement](./movement/movement.md)
 
  - [BVH](./bvh/bvh.md)
 

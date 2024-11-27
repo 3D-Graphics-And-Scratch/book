@@ -1,7 +1,34 @@
 # Ray-based 3D rendering
 *BamBozzle, badatcode123*  
 
-Ray-based techniques in 3D graphics use rays. Rays are defined by their origin (a position in 3D space where the ray starts) and their direction (A vector parallel to the direction of the ray). There are many uses of rays in general, especially in 3D, but it is also possible to use them to fully view a 3D world by itself. This is done by determining if a ray collides with any objects. Methods for this include raytracing, raymarching and DDA. For each pixel in the screen, a ray is cast into the scene, and the pixel is then set to the appropriate color based on how it collides with the objects in the scene. To convert RGB to pen color, refer to the section about [Handling colors in Scratch](../handling-colors-in-scratch/handling-colors-in-scratch.md). Remember, do NOT turn on “run without screen refresh”.
+Ray-based rendering algorithms primarily use rays to render scenes. By shooting a ray into the scene for each pixel, these algorithms are able to calculate the color and depth of these pixels. Many techniques for this exist, such as raytracing, raymarching, DDA, with the main difference between these methods being how intersections with objects are determined. 
+Furthermore, ray-based rendering makes it trivial to implement features such as shadows, reflection and refractions, which are usually much harder to do in other methods of rendering, such as rasterization. The main drawback however, is that ray-based rendering is almost always slower than traditional rasterized rendering.
+To convert RGB to pen color, refer to the section about [Handling colors in Scratch](../handling-colors-in-scratch/handling-colors-in-scratch.md).
+
+## Basics
+*26243AJ, badatcode123*
+
+Mathematically, a ray is defined by an origin (a position in space) and a direction at which it travels. It extends infinitely from its origin in its direction, as seen above. 
+
+Although there are various methods to render a scene using these rays, the majority of them require each pixel of the screen rendered separately in a grid-like fashion. This can be done by iterating through the screen with 2 simple loops;
+
+[Insert blocks here]
+
+*\*In this format, resolution is defined by the size of each individual pixel. A resolution of 1 would produce an image with the same resolution as the vanilla scratch canvas.*   
+*\*\*The pen size is scaled by 1.4, or the square root of 2, as circular pen dots with the same diameter as the height/width of the pixels would not fully fill each pixel.*   
+*\*\*\*It is not recommended for these main render scene blocks to “run without screen refresh,” as these renderings can take up to several seconds to finish, which can cause the page to freeze or even crash if “run without screen refresh” is turned on.*
+
+For each pixel, a ray is created based on the position of the pixel and the position and rotation of the camera. The position of the pixel on the screen can simply be treated as the ray’s x and y direction, and the z direction is defined by the focal length.   
+\[insert generic diagram of ray tracing here to elaborate on this\]  
+Then the ray’s direction is normalized, as further calculations may require a normalized direction, and is then rotated relative to the camera. 
+
+[Insert blocks here]
+
+The cast ray function shoots the ray into the scene, the specifics of how it does this is dependent on the method you are using, but it always finds the closest intersection point to the ray, as seen below.
+
+[Insert diagram here]
+
+As has been said already, the main difference between the methods are in how they find the intersection points.
 
 ```blocks
 define render screen (res)
