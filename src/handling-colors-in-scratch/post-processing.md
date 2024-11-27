@@ -23,7 +23,12 @@ Note that this is only an approximation, the full conversion can be found below
 [https://www.desmos.com/calculator/5kppnk4gkx](https://www.desmos.com/calculator/5kppnk4gkx) (*by SpinningCube*)  
 Using the exponent workaround, we can apply the *x*1/2.2 adjustment on Scratch:
 
-<img src="../images/image89.png" width="400" class="scratch-block">
+```blocks
+define gamma correction (R) (G) (B)
+    set [output R v] to ([e ^ v] of (([ln v] of (R)) / (2.2)))
+    set [output G v] to ([e ^ v] of (([ln v] of (G)) / (2.2)))
+    set [output B v] to ([e ^ v] of (([ln v] of (B)) / (2.2)))
+```
 
 ### Color grading
 
