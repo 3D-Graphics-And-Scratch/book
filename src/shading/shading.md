@@ -30,6 +30,10 @@ Hard shadows can be achieved by shooting rays directly at the light sources from
 
 Raymarching can make an approximation of soft shadows, explained in the raymarching section.
 
+### Depth-buffer based
+
+Another method of shadow casting is rendering the scene to a depth buffer from the light’s point of view. Then, when figuring out if a pixel is in shadow, we find where the pixel is in the depth buffer of each light, and if there’s a depth value smaller than the depth value of the current pixel, projected onto the depth buffer, then we can safely conclude that it’s in shadow. This method however, can be quite costly, because of the fact we need to render a depth buffer for each light source, plus to get a good shadow resolution, the resolution of each depth buffer has to be quite high. Keep in mind that for point lights, the fov of the theoretical camera on the light will be 360 degrees, which will add to the resolution of the depth buffer. Plus, rendering an image for each light is just not possible considering the limitations of scratch or turbowarp, unless the scene is very simple and there’s only a couple of lights.
+
 ### Rasterizer
 
 \=\> talk about how to do shadows with rasterizers.

@@ -18,9 +18,11 @@
 
 <img src="../images/vector.png">
 
-* A vector has a length that can be calculated thusly in 3D: x²+y²+z²   
+* A vector has a length, or “magnitude”, that can be calculated thusly in 3D: √(x²+y²+z²) 
 
 <img src="../images/vector_length.png">
+
+* A vector with a length of 1 is called a “unit vector”.
 
 * Dividing each component of a vector by the vector's length is called “normalizing”, and results in a vector of length 1\. 
 
