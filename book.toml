@@ -7,11 +7,14 @@ title = "Scratch 3D Project Development"
 description = "This book is intended as a guide to modern Scratch graphics programming. Creating 3D games or applications on Scratch might seem intimidating at first, but with this handy book you will be able to create simple to advanced 3D projects on Scratch."
 
 [output.html]
+mathjax-support = true
 default-theme = "light"
 preferred-dark-theme = "light"
+smart-punctuation = true
 git-repository-url = "https://github.com/3D-Graphics-And-Scratch/book/"
 additional-css = ["css/custom.css"]
 additional-js = ["js/custom.js", "js/scratchblocks.js"]
+edit-url-template = "https://github.com/3D-Graphics-And-Scratch/book/edit/main/{path}"
 
 [output.html.print]
 page-break = true
