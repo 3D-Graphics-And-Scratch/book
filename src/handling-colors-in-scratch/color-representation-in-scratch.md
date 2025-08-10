@@ -1,10 +1,12 @@
 # Color representation in Scratch
 *scratchtomv*  
 
-Scratch doesn’t natively support RGB colors, you need to convert to a supported color format, such as : 
+Scratch supports the following color formats : 
 
-* Hexadecimal (ex: \#FF2D55)  
+* Hexadecimal (ex: \#FF2D55, 0xFF2D55)  
 * Decimal (ex: 16711680\)
+
+In scratch we’ll mainly use the decimal version as it’s faster to compute and takes fewer bytes in Scratch memory. 
 
 The pen color can be set with this block :   
 

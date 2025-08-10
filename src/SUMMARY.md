@@ -18,24 +18,24 @@
     - [Drawing Triangles](./rasterization-and-triangles/drawing-triangles.md)
     - [Rendering Basics](./rasterization-and-triangles/rendering-basics.md)
     - [Painter’s algorithm](./rasterization-and-triangles/painter’s-algorithm.md)
-    - [BSP sorting](./rasterization-and-triangles/bsp-sorting.md)
+    - [Binary Space Partitioning (BSP)](./rasterization-and-triangles/bsp-sorting.md)
     - [Depth Buffers](./rasterization-and-triangles/depth-buffers.md)
-    - [Projection optimizations](./rasterization-and-triangles/projection-optimizations.md)
+    - [Projection optimizations]()
 
  - [Ray-based 3D rendering](./ray-based-3D-rendering/ray-based-3D-rendering.md)
     - [2.5D Ray-casting](./ray-based-3D-rendering/2.5d-ray-casting.md)
     - [Ray-tracing](./ray-based-3D-rendering/ray-tracing.md)
     - [Ray-marching](./ray-based-3D-rendering/ray-marching.md)
     - [Path-tracing](./ray-based-3D-rendering/path-tracing.md)
-    - [Photon-Mapping](./ray-based-3D-rendering/photon-mapping.md)
+    - [Photon-Mapping]()
 
  - [Sprite-Based Rendering](./sprite-based-rendering/sprite-based-rendering.md)
     - [Stamp Based Engine](./sprite-based-rendering/stamp-based-engine.md)
-    - [Clone Based Engine](./sprite-based-rendering/clone-based-engine.md)
+    - [Clone Based Engine]()
 
  - [Grids](./grids/grids.md)
     - [Projection](./grids/projection.md)
-    - [Ray Based](./grids/ray-based.md)
+    - [Ray Based]()
 
  - [Shading](./shading/shading.md)
 
@@ -44,7 +44,7 @@
     - [Color conversions](./handling-colors-in-scratch/color-conversions.md)
     - [Post-processing](./handling-colors-in-scratch/post-processing.md)
 
- - [BSP](./bsp/bsp.md)
+ - [Binary Space Partitioning (BSP)](./bsp/bsp.md)
 
  - [Movement](./movement/movement.md)
 

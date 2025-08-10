@@ -1,9 +1,9 @@
 # Ray-based 3D rendering
-*BamBozzle, badatcode123*  
+*26243AJ, BamBozzle, badatcode123*  
 
-Ray-based rendering algorithms primarily use rays to render scenes. By shooting a ray into the scene for each pixel, these algorithms are able to calculate the color and depth of these pixels. Many techniques for this exist, such as raytracing, raymarching, DDA, with the main difference between these methods being how intersections with objects are determined. 
-Furthermore, ray-based rendering makes it trivial to implement features such as shadows, reflection and refractions, which are usually much harder to do in other methods of rendering, such as rasterization. The main drawback however, is that ray-based rendering is almost always slower than traditional rasterized rendering.
-To convert RGB to pen color, refer to the section about [Handling colors in Scratch](../handling-colors-in-scratch/handling-colors-in-scratch.md).
+Ray-based rendering algorithms use rays to render scenes. They work by shooting a ray(s) into the scene for each pixel, these algorithms are able to calculate the color and depth of these pixels. Many techniques for this exist, such as raytracing, raymarching, DDA, etc. The main difference between these methods is how they determine a ray intersects an object in the scene.
+
+Ray-based rendering has the advantage of making it trivial to implement features such as shadows, reflection and refractions, which are usually much harder to do in other methods of rendering, such as rasterization. The drawback being that ray-based rendering is almost always slower than traditional rasterized rendering.
 
 ## Basics
 *26243AJ, badatcode123*

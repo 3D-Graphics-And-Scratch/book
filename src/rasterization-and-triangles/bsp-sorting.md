@@ -1,2 +1,2 @@
-# BSP sorting
-[See this article](../bsp/bsp.md) by littlebunny06.
+# Binary Space Partitioning (BSP)
+[See dedicated article](../bsp/bsp.md) by littlebunny06.

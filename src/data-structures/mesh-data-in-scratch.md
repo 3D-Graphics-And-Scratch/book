@@ -147,8 +147,8 @@ Once done, we can use a simple algorithm to decode the OBJ data, by reading it s
 * (Optional) Reads the material name and links the material data to the following object. (mtllib)  
 * (Optional)Reads the object name (o)  
 * Reads all the vertices position data (v)  
-* (Optional)Reads all the uv data (vt)[^2]  
-* (Optional)Reads all the vertex normal data (vn)[^3]  
+* (Optional)Reads all the uv data (vt)[^1]  
+* (Optional)Reads all the vertex normal data (vn)[^2]  
 * Reads all the face data (f)
 
 In order to read this data, this function uses another function that reads and stores the characters until it finds a special letter combination such as “v”, and returns this data.

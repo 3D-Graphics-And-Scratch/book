@@ -1,9 +1,22 @@
 # Optimizing critical algorithms
 *Krypto*  
 
+#### RTC Table : 
 ![](../images/image47.png)
+*([RTC table by Chrome\_Cat on Scratch](https://scratch.mit.edu/projects/1030987979/))*
 
-Some of Scratch’s blocks are very slow and you should avoid them the majority of the time you are coding. The main blocks you should avoid are the list contains , item \# of list blocks and touching blocks. As you can see in the chart above, they have an rtc of above 35\. Compared to addition blocks, they are at least 35 times slower. In most cases, you will not need to use these blocks. If you do need to use these blocks (Searching for a name in a list, color scanners etc.) you can probably replace them with better alternatives or bake them at start.
+Some of Scratch’s blocks are very slow and should be avoided the majority of the time. 
+
+The main blocks you should avoid are the list contains, item \# of list blocks (both have a time complexity of O(n)) and touching blocks (Scratch needs to scan the entire stage). As you can see in the chart above, they have an rtc of above 35\. Compared to addition blocks, they are at least 35 times slower. In most cases, in 3D you will usually not need to use these blocks. 
+
+If you do need to use these blocks (Searching for a name in a list, color scanners etc.) you can probably replace them with better alternatives or bake them at start.
+
+#### Examples of blocks to avoid : 
+```blocks
+<touching color () ?> 
+(item # of [thing] in [Example List v])
+<[Example List v] contains [thing] ?>
+```
 
 ### Complexity 
 

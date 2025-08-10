@@ -13,7 +13,7 @@ Bounding Volume Hierarchy (BVH) - A tree-based acceleration structure containing
 *(Also known as; View Space, Eye Space)* - 3D coordinates projected relative to the camera, including relative depth.
 
 #### Cross Product : {.cross-product}
-An operation between two vectors that returns a vector perpendicular to the input vectors. The magnitude of this vector is the product of the magnitudes of the input vectors and the sine of the angle between them.
+An operation between two vectors which returns a vector perpendicular to the two input vectors. The magnitude of this vector is the product of the magnitudes of the input vectors and the sine of the angle formed between the vectors. 
 
 #### Lerp : {.lerp}
 Linear Interpolation.

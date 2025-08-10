@@ -4,8 +4,15 @@
 
 ### Basic Kinematics
 
-First, it makes sense to know how objects move. Every physics object has a position and a rotation, obviously. Right now we’ll only look at position, because rotational kinematics is just a more complex version of regular kinematics. For every position, there’s also velocity, that describes how much an object moves. This is a vector quantity. Written in math terms, where p(t) is the final position at time t, and v(t) is velocity at time t, it would look like this: p(t) \= 0tv(t)dt.
-Basically, this just says that the position changes based on velocity over time. Now, then there’s acceleration which describes how much the velocity changes. It’s also where the forces and different interactions get applied at. Same deal, a(t) is the acceleration function, it’s just: v(t) \= 0ta(t)dt . Next up, force. Each object exerts some amount of force to other objects. The equation is simply F=ma. Force is also a vector. Since acceleration is a function, we make a \= a(t), where t is the variable for time.  
+First, it makes sense to know how objects move. Every physics object has a position and a rotation, obviously. Right now we’ll only look at position, because rotational kinematics is just a more complex version of regular kinematics. For every position, there’s also velocity, that describes how much an object moves. This is a vector quantity. Written in math terms, where p(t) is the final position at time t, and v(t) is velocity at time t, it would look like this: 
+
+p(t) \= 0tv(t)dt .   
+
+Basically, this just says that the position changes based on velocity over time. Now, then there’s acceleration which describes how much the velocity changes. It’s also where the forces and different interactions get applied at. Same deal, a(t) is the acceleration function, it’s just: 
+
+v(t) \= 0ta(t)dt .
+
+Next up, force. Each object exerts some amount of force to other objects. The equation is simply F=ma. Force is also a vector. Since acceleration is a function, we make a \= a(t), where t is the variable for time.
 
 ![][image1] 
 
@@ -18,13 +25,14 @@ There are multiple types of collision detection algorithms, which can be categor
 ### AABB Collision Detection Algorithm
 
 AABB stands for Axis Aligned Bounding Box, which should give away some of how this thing works. All it does is to check if two axis aligned boxes are colliding, or inside of each other.
+
 The disadvantage of this algorithm is that it can’t check any rotated boxes (non-axis aligned), so if you were to put a box collider on two objects, they can’t be rotated to the orientation of each object.
 
-So with that out of the way, here’s how it works. If you squash two boxes onto a 1d line, like the x axis, they look like two lines, with a start and end point for each one. If we only think about this 1d line, we can see that if the two lines are intersecting, then the boxes are possibly intersecting. 
+So with that out of the way, here’s how it works. If you squash two boxes onto a 1d line, like the x axis, they look like two lines, with a start and end point for each one. If we only think about this 1d line, we can see that if the two lines are intersecting, then the boxes are possibly intersecting.
 
 ![][image2]
 
-(Illustrations done by Rinostar)  
+*(Illustrations done by Rinostar)*
 
 The equation for this is: Av1xBv2xAv2xBv1x . Now, for the y axis. To test if they’re intersecting or not, we need to also check for the y axis.  
 

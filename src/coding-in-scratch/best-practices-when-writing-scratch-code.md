@@ -19,4 +19,4 @@
 <img src="../images/local_variable.png">
 
 * Clean and organize your code. *Be careful with the clean up blocks function, as it can move blocks to places which may not be ideal for some*
-* Don’t use one big sprite for all your code, it will slow down your project when in editor \[i’m devastated \- bozzle\] \[same \- jfs22\] \[heartbraking \- spog\] \[died of sad \- derpy\] \[literally crying rn \- spinning\]
+* Don’t use one big sprite for all your code, it will slow down your project when in editor \[i’m devastated \- bozzle\] \[same \- jfs22\] \[heartbraking \- spog\] \[died of sad \- derpy\] \[literally crying rn \- spinning\] \[ain’t no way- AJ\]\[lol \- scratchtomv\] \[i refuse to accept this \- 3TheHedgehogCoder3\]\[I used to think broadcasts were slow, but I had to noooo \- rinostar\]

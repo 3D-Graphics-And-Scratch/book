@@ -1,5 +1,5 @@
 # Math functions
-\=\> porting most of the functions from   
+>Porting most of the functions from   
 [https://www.khronos.org/opengles/sdk/docs/manglsl/docbook4/](https://www.khronos.org/opengles/sdk/docs/manglsl/docbook4/)
 
 Scratch doesn’t include a lot of useful mathematical or vector manipulation functions like in other programming languages. Here is a useful list of common math functions written in Scratch code : 

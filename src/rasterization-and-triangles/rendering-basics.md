@@ -18,7 +18,8 @@ Here, I’ve shown what a cube would look like if we just rendered each edge of 
 
 As you can see, each vertex has a 3d point in space. This is usually represented as either coordinates, or vectors. Of course, all coordinates can be vectors, but not all vectors can be coordinates.
 
-Here’s the list of face data as well:  
+Above you can see the list of face data as well.
+
 This entire code for just the cube model is pretty long, especially when you try to stuff vertex colors, uv data, and more inside each model, but that’s how it works. You can plainly see that each face has 4 numbers. The first 3 are pointers[^8], or indices to the vertices of the mesh, and the fourth one is just what color the face is. We won’t be covering face color yet. When getting model data, it’s generally a good idea to have your indices and vertices in separate lists during runtime. The reason I stored the mesh data like this is simply because of being able to more easily import meshes before running the engine. Plus, the mesh data just gets split into vertices and indices whenever needed. But what do we do with all this data? 
 
 Well, if you're just making a mesh loader or something similar, you can just skip these steps, but if you want a more advanced rendering engine (which can be turned into a game engine later), this step is nearly essential: we will need to project these meshes into world space. The reason for this is to be able to not only have multiple meshes rendering at once, but to also be able to freely move, rotate, and scale them at will. 
@@ -28,7 +29,7 @@ Well, if you're just making a mesh loader or something similar, you can just ski
 So how do we do that? Well, with some vector math, of course\! Expressing the scale matrix, which allows you to be able to stretch or squeeze objects in any axis, it looks like this:   
 ![{\&quot;type\&quot;:\&quot;$$\&quot;,\&quot;backgroundColor\&quot;:\&quot;\#ffffff\&quot;,\&quot;id\&quot;:\&quot;1\&quot;,\&quot;aid\&quot;:null,\&quot;backgroundColorModified\&quot;:false,\&quot;font\&quot;:{\&quot;family\&quot;:\&quot;Times New Roman\&quot;,\&quot;size\&quot;:14,\&quot;color\&quot;:\&quot;\#000000\&quot;},\&quot;code\&quot;:\&quot;$$S\\\\left(\\\\vec{s}\\\\right)=\\\\begin{bmatrix}\\n{s\_{x}}\&amp;{0}\&amp;{0}\\\\\\\\\\n{0}\&amp;{s\_{y}}\&amp;{0}\\\\\\\\\\n{0}\&amp;{0}\&amp;{s\_{z}}\\\\\\\\\\n\\\\end{bmatrix}$$\&quot;,\&quot;ts\&quot;:1725736717649,\&quot;cs\&quot;:\&quot;tigIyjqpW4nMiUIOEMllxA==\&quot;,\&quot;size\&quot;:{\&quot;width\&quot;:173,\&quot;height\&quot;:72}}][image1].
 
-Going back to the cube example, if we applied the scaling matrix , with S=2 1 1, then the cube will turn into a rectangular prism: 
+Going back to the cube example, if we applied the scaling matrix, with S = [2 1 1], then the cube will turn into a rectangular prism: 
 
 <img src="../images/mesh example2.png">
 
@@ -69,11 +70,11 @@ Next up, converting the entire scene in world space to view space.
 
 ### Filling
 
-## Advanced
+### Rendering n-gons
 
 *Krypto*  
 
-One of the more advanced ways to raster a polygon is with the fan triangulation. The way this works is that you “pin” one of the vertices of the polygon and then you go around the polygon creating triangles with the vertices of the pin and the current one you are looping around. As you can see in the image below, this triangulates the polygon. Furthermore, you can use quads in a painters engine to triangulate this polygon, adding a bigger performance boost when rastering polygons
+One way to raster a polygon is with the fan triangulation. The way this works is that you “pin” one of the vertices of the polygon and then you go around the polygon creating triangles with the vertices of the pin and the current one you are looping around. As you can see in the image below, this triangulates the polygon. Furthermore, you can use quads in a painters engine to triangulate this polygon, adding a bigger performance boost when rastering polygons. This method of triangulation only works with convex polygons, however.
 
 ![][image21]
 

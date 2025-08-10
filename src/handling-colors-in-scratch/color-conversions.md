@@ -15,7 +15,7 @@ define RGBA to Decimal (R) (G) (B) (A)
     set pen color to ((round (R)) + ((256) * ((round (G)) + ((256) * ((round (B)) + ((256) * (round (A))))))))
 ```
 
-HEX to decimal: (Scratch/JS will automatically do the conversion)  
+Hex to decimal: (Scratch/JS will automatically do the conversion)  
 
 ```blocks
 define HEX to Decimal (HEX)

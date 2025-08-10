@@ -1,3 +1,5 @@
 # Rasterization and Triangles
 *BamBozzle*  
 A rasterizer is a 3D engine which draws objects to the screen by filling in shapes. For example a rasterizer takes in a 3D model constructed from triangles and then draws those triangles to the screen to display the model. Confusingly, in the context of Scratch, “Rasterization” can refer to both the act of filling shapes to draw objects, and also to the specific technique of using a triangle filler that draws pixel-by-pixel (typically with a depth buffer). From here on, “Rasterization” refers to the former. 
+
+The first subchapter [Drawing Triangles](#heading=h.fe9wdzb8tafe) will teach you the theory about different methods of rendering a 3D scene in Scratch. Then [Rendering Basics](#heading=h.o8z4etvbo4kz) will teach you how to build the basis of a 3D raster renderer. Finally, [Painter’s algorithm](#heading=h.xa8dui4wdka4), [BSP sorting](#heading=h.ismh4u21686) and [Depth Buffers](#heading=h.x4ih7ibjn3xp) will teach you about the different sorting techniques.

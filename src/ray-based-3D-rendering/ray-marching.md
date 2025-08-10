@@ -1,12 +1,12 @@
 # Ray-marching
 *badatcode123, derpygamer2142, jfs22*  
 
-Raymarching is a method of ray-based 3D rendering that steps rays through a scene in order to approximate collisions. Raymarching is unique however, in that it uses Signed Distance Functions, or SDFs, to step by the most it can without hitting an object. When inside an object, SDFs return negative, hence the signed part of the name.  
+Raymarching is a method of ray-based 3D rendering that steps rays through a scene in order to approximate collisions. Raymarching is unique however, in that it uses Signed Distance Functions, or SDFs, to step by the most it can without hitting an object in any direction. When inside an object, SDFs return negative, hence the signed part of the name.
 
 <img src="../images/image43.png">
 
 A ray is considered to be intersecting an object when the SDF is less than some arbitrarily small threshold, often called “epsilon”. Additionally, to stop infinite steps when a ray does not hit an object, a maximum number of steps and maximum SDF size are usually used. When these factors are exceeded, the loop is broken.  
-SDFs tend to be far simpler than ray-surface intersection functions, for example, here is the SDF to a sphere, which is just the distance to the center minus the radius of the sphere:  
+SDFs tend to be far simpler than ray-surface intersection functions, for example, here is the SDF to a sphere, which is just the distance to the center minus the radius of the sphere:
 
 ```blocks
 define SDF to sphere| sphere pos: (sx) (sy) (sz) radius (r)
@@ -42,7 +42,7 @@ Next we can add a plane for one of the later articles, [shadows](#advanced-shado
 
 ### Useful primitives
 
-*derpygamer2142*  
+*derpygamer2142, 26243AJ*  
 A primitive is a basic function(in this case that returns distance) that can be used to construct more complex functions. You can find a full list of the functions that are being adapted at [https://iquilezles.org/articles/distfunctions/](https://iquilezles.org/articles/distfunctions/)
 
 The arguments of this function are the point to find the distance to, the sphere’s position, and the sphere’s radius.  
@@ -56,22 +56,32 @@ define Sphere sdf to point (x) (y) (z) sphere pos (sx) (sy) (sz) radius (radius)
 
 *jfs22*  
 
-Starting with a simple primitive, SDFs can be modified in many ways. Some of these modifications include domain repetition and various domain warping. These work because as a ray steps though a scene, it can be moved and warped in order to create the effect of moved and warped geometry.
+Starting with a simple primitive, SDFs can be modified to create complex and organic shapes. I like to split these techniques into two categories, domain warping, and sdf warping
 
-Stretching  
+#### Domain warping
+Domain warping takes in the ray position, and moves this position before calculating distance, effectively warping the domain, and the objects. The following transformations use this.
+
+#### Stretching  
 Simple stretching along a coordinate axis can be done with a division. Stretching the Y axis by 2 times would be written as Ray Y/2, so in a function with an input of Ray Y, it would instead by Ray Y/2. This technique applies to all axes.
 
-Shearing  
+#### Shearing  
 
 <img src="../images/image98.png">
 
-Domain repetition
+#### Domain repetition
 
-Isolating repetition
+#### Isolating repetition
 
-Noise
+#### Noise
 
-Examples
+#### Sdf warping
+These types of transformations modify the sdf, instead of the domain. By adding or subtracting to the sdf, geometry grows or shrinks, allowing the following transformations.
+
+#### Displacement
+
+#### Smoothing
+
+#### Examples
 
 ### Raymarched Normals {#raymarched-normals}
 
@@ -79,10 +89,12 @@ Examples
 
 Raymarched Normals can be approximated with multiple SDF samples, or in specific scenarios, can be skipped by using the directional derivative method.
 
-Solving the normal  
+#### Solving the normal  
 In raymarching, normals can be computed by sampling SDF values around a point. To see how this works, let’s first define a normal. Yes, normals are the direction of a surface, but what does this mean in terms of the SDF? We can see that moving the ray in the direction of the normal would increase the SDF by the greatest amount. Taking this logic, we can sample multiple points around the actual intersection point and see how the SDF changes, then create a vector which maximizes the SDF. In this diagram, you can see how samples pointing towards and away from the surface add to those components of the vector, and samples moving along the surface add less. By adding these up, you get an approximation of the normal.
 
-In 3d, you can sample 6 points, one on each axis. This works, but is not optimal. Instead of sampling each axis, we can sample the 4 points of a tetrahedron. The code follows;  
+In 3d, you can sample 6 points, one on each axis. This works, but is not optimal. Instead of sampling each axis, we can instead approach this problem by constructing a set of vectors where only one surface would be able to satisfy the sampled sdfs, which turns out to be 4 vectors in the shape of a tetrahedron. 
+The code follows;
+ 
 
 <img src="../images/image52.png">
 
@@ -106,10 +118,6 @@ define get normal at point (x) (y) (z)
     change [normal z v] by (SDF)
     normalize (normal x) (normal y) (normal z) :: custom
 ```
-
-Directional derivatives
-
-The directional derivative method utilizes the fact that for simple lighting (ie. dot product lighting), all that is needed is the similarity between the direction of the light and the surface normal. 
 
 ### Advanced shadows {#advanced-shadows}
 

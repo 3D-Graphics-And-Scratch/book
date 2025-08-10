@@ -9,7 +9,8 @@ The rotation matrix is the cornerstone of projection-based 3d engines. However, 
 
 Although it is natural to think about a rotation matrix as one whole operation which converts worldspace coordinates to cameraspace, when applying the matrix to a grid, it is easier to treat said matrix as a set of individual vectors. 
 
-What is a coordinate?  
+#### What is a coordinate?  
+
 In an unrotated 2 dimensional space, coordinates represent a scale factor applied to 2 vectors. The x coordinate would represent the scale factor of the vector (1, 0), the y coordinate would similarly represent the scale factor of the vector (0, 1), and combining these scaled vectors would result in the final point in space. For simplicity, these vectors will be represented as V.x and V.y respectively. Thus, a coordinate value of (x, y) would be converted into a position in space, represented by P, through the equation P \= x\*V.x \+ y\*V.y.  
 
 <img src="../images/grid-projection-1.png">

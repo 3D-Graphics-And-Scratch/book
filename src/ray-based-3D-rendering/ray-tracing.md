@@ -1,5 +1,5 @@
 # Ray-tracing
-*badatcode123*  
+*26243AJ, badatcode123*  
 
 Raytracing is a method of 3D rendering that uses ray-surface intersection functions to find the nearest intersection distance to an object, “t”, if the ray hits the object. A simple ray-surface intersection is the ray-sphere intersection, shown below.  
 

@@ -1,2 +1,29 @@
- - change font to scratch font
+# TODO list
+
+## For the website : 
+ - change font (maybe something like scratch font)
  - improve glossary linking
+
+## Missing adaptation from the book : 
+ - add Low-hanging fruit (stupid strings) section
+ - adapt the Computational Complexity section
+ - adapt the Ray-based 3D rendering/Basics section
+ - adapt the ray-based-3D-rendering/ray-tracing section, though I don't know if this is approved, it seems a bit messy
+ - adapt the whole ray-based-3D-rendering/path-tracing section
+ - add scratchblocks in rasterization-and-triangles/rendering-basics/converting-to world-space
+ - add scratchblocks in ray-based-3D-rendering/ray-marching/useful-primitives
+ - add scratchblocks in grids/projection/what-is-a-coordinate
+ - add scratchblocks in movement/movement
+ - add MathJax equations in movement/movement
+ - add missing illustrations in movement/movement/SAT Collision Detection Algorithm
+ - add missing math functions in math-functions/math-functions
+
+---
+---
+
+TheReal_BestGamer also wrote some sections which do not comply to the writing style of the book, so they first need to be entirely re-written before being added to the website : 
+ - Rasterization and Triangles/rendering basics/converting to view-space
+ - Rasterization and Triangles/rendering basics/Z clipping
+ - ray-based-3D-rendering/2.5d-ray-casting/floorcasting
+ - ray-based-3D-rendering/2.5d-ray-casting/terrain
+ - ray-based-3D-rendering/2.5d-ray-casting/sprites

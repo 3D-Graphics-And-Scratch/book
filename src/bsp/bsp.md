@@ -1,4 +1,4 @@
-# BSP
+# Binary Space Partitioning (BSP)
 *littlebunny06*
 
 ## littlebunny06’s Ramblings on BSP: The Undiscovered Country

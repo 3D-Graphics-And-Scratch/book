@@ -14,7 +14,7 @@
 
 *derpygamer2142, scratchtomv, BamBozzle*
 
-* A vector is a set of numbers similar to a coordinate. They usually describe a movement (called a translation) or direction in space. In 3D vectors are most often found with 3 values, denoted as x, y and z.   
+* A vector is a set of numbers similar to a coordinate. They usually describe a movement (called a translation) or direction in space. In 3D, vectors are most often found with 3 values, denoted as x, y and z.   
 
 <img src="../images/vector.png">
 
@@ -24,7 +24,7 @@
 
 * A vector with a length of 1 is called a “unit vector”.
 
-* Dividing each component of a vector by the vector's length is called “normalizing”, and results in a vector of length 1\. 
+* Dividing each component (x, y, and z) of a vector by the vector's length is called “normalizing”, and results in a unit vector pointing in the same direction.
 
 <img src="../images/vectors.png">
 
@@ -36,17 +36,17 @@
 
 <img src="../images/point.png">
 
-* A ray is an infinite line in space defined by its origin (a point), and its direction (a vector).  
+* A ray is a line in space which begins at an origin (a point), and extends infinitely in a particular direction (a vector). 
 
 <img src="../images/ray.png">
-
-* A normal is a vector perpendicular to a surface. These are often normalized, but are not necessarily.   
-
-<img src="../images/normal.png">
 
 * A plane is an infinite flat surface that extends across space. They can be defined in a number of ways, but most often by their normal (the direction the face of the plane is pointing) and their distance from the origin.  
 
 <img src="../images/plane.png">
+
+* A normal is a vector perpendicular to a surface. These are often normalized.
+
+<img src="../images/normal.png">
 
 * A triangle is made up of 3 points, with the space between them filled in. Triangles are commonly used in 3d graphics because you can make any shape out of them.  
 
@@ -68,7 +68,7 @@
 * Sine, cosine, and tangent(often shortened to sin, cos, and tan) and their functional inverses of arcsine, arccosine, and arctangent(asin, acos, atan) are trigonometric functions. They are used to describe the relationship between lengths, angles, and more. The specifics aren’t really relevant to 3d graphics very often, and are mostly used for rotation.  
 * Trigonometry functions can either use an input in degrees or radians. Radians are a form of describing rotation as a position on a circle with a radius of 1\. One full rotation in radians is 2π.   
   Degrees work the same as radians, but they don’t need π to represent 1 full rotation, hence keeping the calculations simple. One full rotation in degrees is 360 degrees.  
-* You can convert from radians to degrees by multiplying the radians by 180, and from degrees to radians by multiplying by 180\. Scratch uses the degrees system, and that is what we will use throughout this guide.
+* You can convert from radians to degrees by multiplying the radians by 180/π, and from degrees to radians by multiplying by π/180\. Scratch uses the degrees system, and that is what we will use throughout this guide.
 
 ![Circle Cos Sin](../images/image14.gif)
 
@@ -83,7 +83,7 @@ Matrices can be classified based on how many rows and columns they have, the mat
 
 An important matrix that is used throughout 3D graphics is the transformation matrix, it is a 4x4 matrix and can be used to convert between world space and a local space, it is often used to convert to camera space. To do this, multiply a vector (the vector being a vertex you are transforming in this case) with the transformation matrix.
 
-In scratch, we usually use 3x3 matrices instead of a 4x4 matrix. We use a 3x3 matrix because it’s much easier to calculate its values, although a 4x4 matrix might make it faster and easier to scale and translate objects
+In scratch, we usually use 3x3 matrices instead of a 4x4 matrix. We use a 3x3 matrix because it’s much easier to calculate its values, although a 4x4 matrix might make it faster and easier to scale and translate objects.
 
 Matrix multiplication is performed by multiplying the corresponding rows and columns, then adding them together.   
 Here is an example in which the matrices ![][image3] and ![][image4]  are multiplied.  
@@ -108,11 +108,21 @@ Which can be simplified down to
 
 ![][image8]
 
-In the third dimension, there are 3 basic rotations (rotation around the x axis, rotation around the y axis, and rotation around the z axis), and thus there are 3 general rotation matrices.  
+Unlike in 2 dimensions, in the third dimension there are 3 basic rotations: rotation around the x axis, rotation around the y axis, and rotation around the z axis. 
+Thus, there are 3 general rotation matrices for each individual rotation.
+
+These can each be derived from the 2d rotation matrix, by rotating two out of
+the 3 axes.
+
+For example, the rotation matrix for rotation around the x axis can be derived by
+keeping the x axis unchanged, and applying the 2d rotation matrix to the y and z
+axes.
+
+These matrices are listed below:
 
 ![][image9]  
 
-Which can then be combined into one matrix by applying matrix multiplication  
+These matrices can also be combined into one single rotation matrix which applies all 3 rotations at once.
 
 ![][image10]
 
